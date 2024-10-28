@@ -1,1 +1,243 @@
-bagiannya yosi
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>
+                BARBS
+        </title>
+        <style>
+                /* untuk menyeting seluruh halaman pada margin dan padding tertentu */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+
+                /* untuk mengatur navbar agar posisinya selalu di atas */
+               .nav{ 
+                    padding: 5px 0px; /* untuk mengatur jarak navbar dari atas page */
+                    position: fixed;  /* Membuat navbar sticky */
+                    width: 100%;
+                    top: 0; /* Posisi atas */
+                    background-color: #ceefe8;
+                    z-index: 99;
+                }
+
+                /* untuk mengatur background dan memberi efek pada tombol Back To Dashboard pada navbar  */
+                .nav a {
+                    color: white; 
+                    padding: 14px 20px; /* untuk mengatur padding background */
+                    text-decoration: none; 
+                    position: fixed;
+                    background-color: #363636;
+                    border-radius: 30px;
+                    right: 20px;
+                    transition: 0.3s ease-in; /* transisi saat kursor berada di bagian button */
+                }
+
+                /* untuk mengatur perpindahan warna pada animasi tombol  */
+                .nav a:hover {
+                    color: #363636;
+                    background-color: white;
+                }
+                
+                /* untuk mengatur tata letak element element form */
+                .container {   
+                max-width: 600px; /* untuk mengatur lebar maksimal box form */
+                margin: 150px 350px 80px; /* untuk mengatur margin atas(top), kanan kiri, bawah(bottom)*/
+                padding: 20px;/* untuk mengatur jarak konten dengan border elemen */
+                background: silver; /* untuk membuat backrground pada elemen */
+                border-radius: 5px;/* untuk mengatur jarak pada border */
+                box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);/* untuk mengatur bayangan pada elemen */
+                }
+                
+                /* untuk mengatur background pada page */
+                .background{
+                    position: fixed; /* untuk memposisikan gambar full layar */
+                    top: 0;
+                    left: 0;
+                    width: 100%; 
+                    height: 100%; /* untuk mengatur tinggi backround/gambar yang di inginkan */
+                    background-image: url('cukram.jpg'); /* Ganti dengan URL gambar Anda */
+                    background-size: cover; /* Memastikan gambar menutupi seluruh area */ 
+                    background-position: center; /* Memusatkan gambar */
+                    filter: blur(10px); /* Mengatur efek blur */
+                    z-index: -1; /* Mengatur z-index agar di belakang konten */
+                }
+                
+                /* untuk mengatur posisi jam yang ada di navbar  */
+                .tanggal{
+                    position: fixed; /* untuk mengatur posisi absoult */
+                    top: 20px; left: 50%;
+                    transform: translateX(-50%); /* mengatur  posisi ahgar diatas navbar*/
+                    color: #363636;
+                    text-align: center;
+                    z-index: 100;
+                }
+             
+            /* untuk menyeting sebuah tipe data yang akan di input */
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            input[type="date"],
+            input[type="time"],
+            
+
+            select {
+                width: 100%; /* untuk mengatur lebar pada opsi select */
+                padding: 10px 0; /*  untuk mengatur jarak konten dengan border elemen */
+                margin-bottom: 15px; /* untuk mengatur jarak pada bagian bawah elemen */
+                border: 1px solid #ccc;/* untuk membuat garisnya berwarna */
+                border-radius: 5px;/* untuk mengatur jarak pada border */
+            }
+
+
+            .input{
+                background-color: #76d1c1; /*untuk mengatur warna pada background  */
+                color: white;/* untuk menambahkan warna pada elemen */
+                border: none; /* Menghilangkan garis tepi dari elemen. */
+                padding: 10px;/*  Menambahkan ruang di dalam elemen, menciptakan jarak antara konten dan tepi elemen. */
+                border-radius: 5px; /* untuk mengatur jarak pada border */
+                cursor: pointer;/* Mengubah kursor menjadi tangan saat pengguna mengarahkan mouse ke elemen, menunjukkan bahwa elemen dapat diklik. */
+                font-size: 16px; /* Mengatur ukuran font teks dalam elemen, membuatnya lebih mudah dibaca. */
+                transition: 0.3s ease-in;
+            }
+
+            .input a{
+                background-color: #76d1c1; /*untuk mengatur warna pada background  */
+                color: black;/* untuk menambahkan warna pada elemen */
+                text-decoration: none;
+                transition: 0.3s ease-in;
+            }
+
+            /* fungsi hover untuk mengatur saat kursor menyentuh element*/
+            .input:hover {
+                transform: scale(1.2);
+            } 
+
+                /* untuk menyeting footer */
+                footer {
+                    margin-top: 50px;
+                    padding: 20px;
+                    text-align: center;
+                    background-color: #ceefe8;
+                }
+
+                footer h2 {
+                    color: black; /* untuk mengubah warna text yang ada di dalam footer */
+                    font-weight: bold;
+                }
+
+                /* untuk mengatur margin tiap text  */
+                footer i {
+                    margin-right: 10px;
+                }
+
+                /* untuk menghilangkan garis di text */
+                footer a {
+                    text-decoration: none;
+                }
+
+                /* untuk mengatur agar list menyamping */
+                li{
+                    display: inline; /* untuk menampilkan tulisan menyamping */
+                    margin-right: 5%; /* untuk mengatur jarak antar tulisan */
+                }
+        </style>
+    </head>  
+    <body>
+        <div class="background"></div>
+         <div class="nav">
+            <img src="logo.png" alt="Logo" style="height: 50px; vertical-align: middle; margin-bottom: 15px;">
+            <h1 style="display: inline; color: #363636; font-family: Verdana, Geneva, Tahoma, sans-serif; padding-left:10px; " >BRABSBERSHOP</h1>
+            <nav style="display: inline; float: right;">
+                <a href="index (1).html">Back To Dashboard</a>
+    
+    </div>
+    <div class="tanggal">
+        <div id="date" class="clock"></div>
+        <div id="time" class="clock"></div>
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const date = now.toLocaleDateString('id-ID', {
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric'
+                });
+                const time = now.toLocaleTimeString('id-ID');
+    
+                document.getElementById('date').innerText = date;
+                document.getElementById('time').innerText = time;
+            }
+            setInterval(updateTime, 1000); // Update setiap 1 detik
+            updateTime(); // Panggil fungsi pertama kali saat halaman dimuat
+        </script>
+        </div>
+        <div class="container">
+            <h2>Form Reservasi Barbershop</h2>
+            <form action="#" method="POST">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="phone">Nomor HP:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="haircutType">Jenis Cukuran:</label>
+                <select id="haircutType" name="haircutType" required>
+                    <option value="" disabled selected>Pilih Gaya Cukuran</option>
+                    <option value="Rambut Pendek">Rambut Pendek</option>
+                    <option value="Rambut Sedang">Rambut Sedang</option>
+                    <option value="Rambut Panjang">Rambut Panjang</option>
+                </select>
+
+                <label for="addservices">Add Services:</label><br>
+                <label>
+                    <input type="checkbox" name="addservices" value="Keramas">
+                    Keramas
+                </label><br>
+                <label>
+                    <input type="checkbox" name="addservices" value="WarnaRambut">
+                    Warna Rambut
+                </label><br>
+                <label>
+                    <input type="checkbox" name="addservices" value="Pijat">
+                    Pijat
+                </label><br>
+                <label>
+                    <input type="checkbox" name="addservices" value="Spa">
+                    Spa
+                </label><br>
+                <br>        
+                <label for="date">Tanggal Cukur:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="time">Waktu Cukur:</label>
+                <input type="time" id="time" name="time" required>
+            </form>
+            <button class="input">
+                <a href="hasill.html" class="inputtxt">Reservasi</a>
+            </button>
+        </div>
+    <footer style="padding: 20px; text-align: center;">
+        <h2>Contact Us</h2>
+        <ul style="list-style-type: none; padding: 0; margin: 10px;">
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{firza.23155@mhs.unesa.ac.id}}&su=Subject&body=Body%20Text">firza.23155@mhs.unesa.ac.id</a></li>
+            <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <a href="https://api.whatsapp.com/send?phone=6281586525812">081586525812</a></li>
+            <li><i class="fa-brands fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/eeeeeehhhhh2023/"> @eeeeeehhhhh2023</a></li>
+            <li><i class="fa-brands fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/alyaa.fp/">cp @alyaa.fp</a></li>
+        </ul>
+        <div style="width: 100%;">
+            <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                    src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=en&amp;q=Jl.%20Tambak%20Wedi%20Baru%20No.23,%20Tambak%20Wedi,%20Kec.%20Kenjeran,%20Surabaya,%20Jawa%20Timur%2060126+(Our%20Here)&amp;t=k&amp;z=21&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+        </div>
+    </footer>
+    </body>
+</html>
